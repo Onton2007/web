@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <span
+    role="checkbox"
+    aria-checked="false"
+    tabindex="1"
+    aria-labelledby="condiciones">
+    </span>
+
+</head>
+<body>
+
+  <fieldset>
+
+    <legend>QUIEN ERES PARA ENTRAR EN ESTA WEB</legend>
+    
+    <label>
+            Nombre y apellido:
+        <input type="text" name="nombre">
+        <input type="text" name="apellido">
+        <br>Nombre de usuario:
+        <input type="text" name="nombre_usuario">
+        <br>Correo electrónico:
+        <input type="text" name="correo_electronico">
+        <br>Contraseña:
+        <input type="text" name="Contrasena">
+        <br>Confirmar contraseña:
+        <input type="text" name="com_contrasena">
+    </label>
+    <br>
+
+    <label>
+      Género (opcional):
+      <select name="genero">
+          <option value="" aria-label="genero" disabled selected></option>
+          <option value="0">Masculino</option>
+          <option value="1">Femenino</option>
+          <option value="2">No específico</option>
+      </select>
+    </label>
+    <br>
+    <details>
+    <summary>Condiciones de uso</summary>
+    <p>
+      texto no inventado por el autor 
+      <abbr title="texto_condiciones_puntos">texto</abbr>,
+    </p>
+
+    <input type="checkbox" id="condiciones">
+    <label for="condiciones">Acepto las condiciones</label>
+
+  </details>
+
+    <br>
+    <br>
+    <button type="submit">Enviar</button>
+  </fieldset>
+
+  <br><br>
+
+<a href="../activitats.html" aria-label="Atras">⬅️</a>
+</body>
+</html>
