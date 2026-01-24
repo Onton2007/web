@@ -1,0 +1,9 @@
+:root{
+    --altura:100px;
+}
+
+.cuadrado {
+    height: var(--altura);
+    width: calc(var(--altura) * 2);
+    background-color: #D95B43;
+}
