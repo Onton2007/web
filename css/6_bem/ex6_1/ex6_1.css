@@ -1,0 +1,32 @@
+.header{
+    background-color: #020020;
+}
+
+.logo{
+    border-radius: 100px;
+}
+
+.header_links{
+    position: absolute;
+    color: #008026cd;
+    display: inline;
+    top: 25px;;
+}
+
+.header_link{color: #008026cd;}
+
+input{
+    position: absolute;
+    top: 25px;;
+    right: 80px;
+    background-color: rgb(203, 255, 187);
+    color: rgb(49, 181, 8);
+}
+
+.search{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: rgb(203, 255, 187);
+    color: rgb(49, 181, 8);
+}
