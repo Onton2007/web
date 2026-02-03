@@ -1,0 +1,18 @@
+body {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: justify;
+}
+
+p.parraf_2{
+    text-transform: uppercase;
+}
+
+.groc{
+    background-color: yellow;
+    font-style: italic;
+}

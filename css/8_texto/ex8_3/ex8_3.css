@@ -2,10 +2,24 @@ body {
     font-family: Georgia, "Times New Roman", serif;
 }
 
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+}
+
 h1 {
     font-size: 36px;
     font-weight: bold;
     text-align: center;
+    word-spacing: 15px;
+    letter-spacing: 5px;
+}
+
+h1:hover{
+    color: blue;
+    font-style: italic;
 }
 
 h2 {
@@ -16,18 +30,22 @@ h2 {
 
 h3 {
     font-size: 20px;
-    font-weight: bold;
-    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+h3:hover{
+    color: red;
+    font-weight:bold;
 }
 
 .intro {
     font-size: 16px;
     font-style: italic;
-    text-align: center;
 }
 
 p {
     font-size: 16px;
     font-weight: normal;
-    text-align: justify;   
+    text-align: justify;
 }
