@@ -1,0 +1,33 @@
+p {
+    text-align:left;
+}
+text{
+    position: relative;
+    left: 10px;
+}
+div{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    max-width: 450px;
+    border-radius: 5%;
+}
+
+.logo{
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border-radius: 100px;
+}
+
+.mensaje_propio{
+    left: 10%;
+    background-color: rgba(40, 255, 0, 0.9);
+}
+
+.mensaje_otro{
+    left: 55%;
+    background-color: rgba(180, 255, 200, 0.9);
+}
