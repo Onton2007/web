@@ -1,0 +1,29 @@
+p {
+    text-align: center;
+}
+div{
+    position: relative;
+}
+.parraf_1{
+    max-width: 700px;
+    max-height: 10rem;
+    min-height: 5rem;
+    left: 100px;
+    background-color: rgb(255, 0, 0);
+}
+
+.parraf_2{
+    max-width: 700px;
+    max-height: 10rem;
+    min-height: 5rem;
+    left: 200px;
+    background-color: rgb(255, 136, 0);
+}
+
+.parraf_3{
+    max-width: 700px;
+    max-height: 10rem;
+    min-height: 5rem;
+    left: 300px;
+    background-color: rgb(21, 255, 0);
+}
