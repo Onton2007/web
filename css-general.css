@@ -1,0 +1,92 @@
+:root{
+    --general_width: 75%;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+div.general{
+    height: 100vh;
+    position: relative;
+    float: right;
+	width: var(--general_width);
+
+}
+div.info-bar{
+    height: 100vh;
+    float: left;
+	width: calc(100% - var(--general_width));
+	background: #B0B0B0;
+}
+
+
+
+a {
+  text-align: center;
+  text-decoration: none;
+
+  position: relative;
+
+  font-size: 1rem;
+  padding: 1% 2%;
+  border-radius: 30px;
+}
+
+
+/* ------------------ barra superoor -------------- */
+div.fast_bar{
+    position:fixed;
+    top: 1%;
+    background-color: #00007a9d;
+    border-radius: 30px;
+    margin: 1% 12%;
+    padding: 2% 4%;
+
+    display: flex;
+    justify-content: center; /* centro horizontal */
+    align-items: center;     /* centro vertical */
+
+    z-index: 10; /* superfisial */
+}
+a#fast_bar{
+  color: #05C400;
+  background-color: black;
+  margin: 0 10px;
+}
+a#fast_bar:hover {
+  background: #07c4005e;
+  color: #FE9F4D;
+}
+
+
+/* ------------------ img fondo -------------- */
+nav.cuvrimiento{
+    height: 50%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.fondo_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+/* ---------------- parrafos ------------------*/
+
+nav.parrafos{
+    height: 100%;
+    width: 100%;
+    background-color: #595959;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
