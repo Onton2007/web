@@ -156,9 +156,13 @@ body.activitats h1{
   font-family: 'Courier New', Courier, monospace;
 }
 
-body.activitats a{
+body.activitats a#completad{
   font-size: 1.1vw;
   color: #05C400;
+}
+body.activitats a#nocompletad{
+  font-size: 1.1vw;
+  color: #ff0000;
 }
 
 body.activitats a#surtida{
