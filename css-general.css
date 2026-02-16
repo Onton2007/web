@@ -1,5 +1,5 @@
 :root{
-    --general_width: 75%;
+    --general_width: 80%;
 }
 
 * {
@@ -9,20 +9,18 @@
 }
 
 div.general{
-    height: 100vh;
-    position: relative;
-    float: right;
+  height: 100vh;
+  position: relative;
+  float: right;
 	width: var(--general_width);
 
 }
 div.info-bar{
-    height: 100vh;
-    float: left;
+  height: 150vh;
+  position: relative;
 	width: calc(100% - var(--general_width));
 	background: #B0B0B0;
 }
-
-
 
 a {
   text-align: center;
@@ -30,9 +28,9 @@ a {
 
   position: relative;
 
-  font-size: 1rem;
+  font-size: 1vw;
   padding: 1% 2%;
-  border-radius: 30px;
+  border-radius: 1vw;
 }
 
 
@@ -52,6 +50,7 @@ div.fast_bar{
     z-index: 10; /* superfisial */
 }
 a#fast_bar{
+  font-size: 1.2vw;
   color: #05C400;
   background-color: black;
   margin: 0 10px;
@@ -82,11 +81,114 @@ img.fondo_img {
 
 /* ---------------- parrafos ------------------*/
 
-nav.parrafos{
+div.parrafos_part{
     height: 100%;
     width: 100%;
+
     background-color: #595959;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;   /* columna */
     align-items: center;
+}
+
+div.parraf{
+  
+  border-radius: 20px;
+  margin: 2vw 5vw;
+
+  background-color: #968200;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.parraf p{
+  font-size: 1.2vw;
+  margin: 10px 20px;
+}
+
+/* ---------------- contactes ------------------*/
+
+div#contacte{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin: 1vw;
+}
+
+img.logo_contacte{
+  width: 3vw;
+  height: 3vw;
+  object-fit: cover;
+  border-radius: 50%;
+}
+img.persona_logos{
+  width: 10vw;
+  height: 10vw;
+  margin: 1vw 0vw 1vw 5vw; /*for top, right, bottom, left*/
+  object-fit: cover;
+}
+
+a#link_contacte{
+  font-size: 1.2vw;
+  color: #000;
+}
+a#link_contacte:hover{
+  color: #d38105;
+}
+
+
+/* ------------ activitats ------------------ */
+
+body.activitats{
+  background-color: #0095ff;
+
+  display: flex;
+  flex-direction: column;   /* columna */
+  align-items: center;
+}
+
+body.activitats h1{
+  margin: 3vw 3vw;
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body.activitats a{
+  font-size: 1.1vw;
+  color: #05C400;
+}
+
+body.activitats a#surtida{
+  font-size: 2vw;
+  color: #05C400;
+  background-color: #000;
+  margin: 50px 50px;
+}
+
+body.activitats a#surtida:hover{
+  color: #0055c4;
+  background-color: #ff0000;
+}
+
+body.activitats a:hover{
+  color: #ccb90a;
+}
+
+body.activitats table {
+  width: 100%;
+  table-layout: fixed;   /* columnas rectas */
+}
+
+body.activitats table td {
+  text-align: center;
+  background-color: black;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+body.activitats table td:hover {
+  background-color: rgb(255, 0, 0);
 }
