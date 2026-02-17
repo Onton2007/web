@@ -70,6 +70,8 @@ div.fast_bar{
 }
 a#fast_bar{
   font-size: 1.2vw;
+  min-width: 125px;
+  min-height: 50px;
   color: var(--texto_botones);
   background-color: var(--botones);
   margin: 0 10px;
