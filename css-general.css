@@ -1,5 +1,24 @@
 :root{
-    --general_width: 80%;
+    --general_width: 75%;
+
+    --fondo_color: #0f172a;        /* fondo principal */
+    --barra_info_color: #1e293b;   /* barra lateral */
+    --fondo_parrafos: #334155;     /* tarjetas */
+    --fast_bar_color: #020617cc;   /* barra superior */
+
+    --titols: #38bdf8;
+    --texto: #e5e7eb;
+    --textos: #f1f5f9;
+
+    --botones: #3b82f6;
+    --botones_hover: #1d4ed8;
+
+    --texto_botones: #020617;
+    --texto_botones_hover: #fbbf24;
+}
+
+*:hover{
+  transition: 0.5s;
 }
 
 * {
@@ -19,7 +38,7 @@ div.info-bar{
   height: 150vh;
   position: relative;
 	width: calc(100% - var(--general_width));
-	background: #B0B0B0;
+	background: var(--barra_info_color);
 }
 
 a {
@@ -38,7 +57,7 @@ a {
 div.fast_bar{
     position:fixed;
     top: 1%;
-    background-color: #00007a9d;
+    background-color: var(--fast_bar_color);
     border-radius: 30px;
     margin: 1% 12%;
     padding: 2% 4%;
@@ -51,13 +70,13 @@ div.fast_bar{
 }
 a#fast_bar{
   font-size: 1.2vw;
-  color: #05C400;
-  background-color: black;
+  color: var(--texto_botones);
+  background-color: var(--botones);
   margin: 0 10px;
 }
 a#fast_bar:hover {
-  background: #07c4005e;
-  color: #FE9F4D;
+  background: var(--botones_hover);
+  color: var(--texto_botones_hover);
 }
 
 
@@ -85,7 +104,7 @@ div.parrafos_part{
     height: 100%;
     width: 100%;
 
-    background-color: #595959;
+    background-color: var(--fondo_color);
 
     display: flex;
     flex-direction: column;   /* columna */
@@ -97,7 +116,7 @@ div.parraf{
   border-radius: 20px;
   margin: 2vw 5vw;
 
-  background-color: #968200;
+  background-color: var(--fondo_parrafos);
 
   display: flex;
   justify-content: center;
@@ -105,6 +124,7 @@ div.parraf{
 }
 
 div.parraf p{
+  color: var(--texto);
   font-size: 1.2vw;
   margin: 10px 20px;
 }
@@ -114,8 +134,11 @@ div.parraf p{
 div#contacte{
   display: flex;
   align-items: center;
+
   gap: 1vw;
   margin: 1vw;
+
+  color: var(--textos);
 }
 
 img.logo_contacte{
@@ -133,17 +156,17 @@ img.persona_logos{
 
 a#link_contacte{
   font-size: 1.2vw;
-  color: #000;
+  color: var(--textos);
 }
 a#link_contacte:hover{
-  color: #d38105;
+  color: var(--texto_botones_hover);
 }
 
 
 /* ------------ activitats ------------------ */
 
 body.activitats{
-  background-color: #0095ff;
+  background-color: var(--fondo_color);
 
   display: flex;
   flex-direction: column;   /* columna */
@@ -152,7 +175,7 @@ body.activitats{
 
 body.activitats h1{
   margin: 3vw 3vw;
-  color: #000;
+  color: var(--titols);
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -167,18 +190,18 @@ body.activitats a#nocompletad{
 
 body.activitats a#surtida{
   font-size: 2vw;
-  color: #05C400;
-  background-color: #000;
+  color: var(--texto_botones);
+  background-color: var(--botones);
   margin: 50px 50px;
 }
 
 body.activitats a#surtida:hover{
-  color: #0055c4;
-  background-color: #ff0000;
+  color: var(--texto_botones_hover);
+  background-color: var(--botones_hover);
 }
 
 body.activitats a:hover{
-  color: #ccb90a;
+  color: var(--texto_botones_hover);
 }
 
 body.activitats table {
@@ -188,11 +211,11 @@ body.activitats table {
 
 body.activitats table td {
   text-align: center;
-  background-color: black;
+  background-color: var(--botones);
   border-radius: 30px;
   padding: 5px;
 }
 
 body.activitats table td:hover {
-  background-color: rgb(255, 0, 0);
+  background-color: var(--botones_hover);
 }
