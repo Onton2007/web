@@ -27,6 +27,10 @@
    box-sizing: border-box;
 }
 
+h1{
+  font-size: 5vw;
+}
+
 div.general{
   height: 100vh;
   position: relative;
@@ -57,7 +61,7 @@ a {
 }
 
 
-/* ------------------ barra superoor -------------- */
+/* ------------------ barra superoor//fast_bar -------------- */
 div.fast_bar{
     position:fixed;
     top: 1%;
@@ -72,15 +76,25 @@ div.fast_bar{
 
     z-index: 10; /* superfisial */
 }
-a#fast_bar{
+#fast_bar{
   font-size: 1.2vw;
   min-width: 10vw;
-  min-height: 5vw;
+  min-height: 3vw;
   color: var(--texto_botones);
   background-color: var(--botones);
   padding: 13px 10px;
-  margin: 0 10px;
+  margin: 0 40px;
+
+  display: flex;
+  justify-content: center; /* centro horizontal */
+  align-items: center;     /* centro vertical */
 }
+
+div#fast_bar{
+  color:rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+
 a#fast_bar:hover {
   background: var(--botones_hover);
   color: var(--texto_botones_hover);
@@ -122,6 +136,7 @@ div.parraf{
   
   border-radius: 20px;
   margin: 2vw 5vw;
+  padding: 1vw 1vw;
 
   background-color: var(--fondo_parrafos);
 
@@ -212,61 +227,27 @@ body.activitats a:hover{
 }
 
 body.activitats table {
+  border-spacing: 20px;
   width: 100%;
   table-layout: fixed;   /* columnas rectas */
 }
 
 body.activitats table td {
   text-align: center;
+  border: 10px solid var(--botones_hover);
   background-color: var(--botones);
-  border-radius: 30px;
-  padding: 5px 5px;
+  border-radius: 0.5vw;
+  padding: 0.5vw 0.5vw;
+
 }
 
 body.activitats table td:hover {
   background-color: var(--botones_hover);
+  border: 10px solid var(--botones);
 }
 
-/* ------------ interfas activitats ----------- */
-
-body.activitats_1 {
-  background-color: var(--fondo_color);
-
-  display: block;
-  justify-content: center;
-  align-items: center;
-}
-
-
-body.activitats_1 div{
-  background-color: var(--fondo_color);
-
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body.activitats_1 a#a_activitats_1 {
-  margin: 10vw;
-
-  font-size: 3vw;
-  
-  background-color: var(--botones);
-  color: var(--texto_botones);
-}
-body.activitats_1 a#a_activitats_1:hover {
-  background-color: var(--botones_hover);
-  color: var(--texto_botones_hover);
-}
-
-body.activitats_1 a#surtida{
-  font-size: 2vw;
-  color: var(--texto_botones);
-  background-color: var(--botones);
-  margin: 42.5vw;
-}
-
-body.activitats_1 a#surtida:hover{
-  color: var(--texto_botones_hover);
-  background-color: var(--botones_hover);
+body.activitats div{
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 10vw;
 }
