@@ -1,0 +1,78 @@
+:root{
+    --general_width: 75%;
+
+    --fondo_color: #042130;        /* fondo principal */
+    --barra_info_color: #075A87;   /* barra lateral */
+    --fondo_parrafos: #075A87;     /* tarjetas */
+    --fast_bar_color: #041118;   /* barra superior */
+
+    --titols: #38bdf8;
+    --texto: #e5e7eb;
+    --textos: #f1f5f9;
+
+    --botones: #097ED1;
+    --botones_hover: #06416b;
+
+    --texto_botones: #020617;
+    --texto_botones_hover: #097ED1;
+}
+
+/* ------------ interfas activitats ----------- */
+
+body {
+  max-height: 100%;
+  max-width: 100%;
+  background-color: var(--fondo_color);
+
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+
+  position: relative;
+
+  font-size: 1vw;
+  padding: 1% 2%;
+  border-radius: 1vw;
+}
+
+
+
+
+div{
+  background-color: var(--fondo_color);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a#a_activitats {
+  margin: 10vw;
+
+  font-size: 3vw;
+  
+  background-color: var(--botones);
+  color: var(--texto_botones);
+}
+a#a_activitats:hover {
+  background-color: var(--botones_hover);
+  color: var(--texto_botones_hover);
+}
+
+a#surtida{
+  font-size: 2.5vw;
+  padding: 2vw;
+  color: var(--texto_botones);
+  background-color: var(--botones);
+  margin: 10vw 0vw 10vw 41vw;
+}
+
+a#surtida:hover{
+  color: var(--texto_botones_hover);
+  background-color: var(--botones_hover);
+}
