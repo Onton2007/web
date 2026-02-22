@@ -1,0 +1,162 @@
+:root{
+    --general_width: 75%;
+
+    --fondo_color: #042130;        /* fondo principal */
+    --barra_info_color: #1170a3;   /* barra lateral */
+    --fondo_parrafos: #075A87;     /* tarjetas */
+    --top_barr_color: #041118;   /* barra superior */
+
+    --titols: #38bdf8;
+    --texto: #d4dbeb;
+    --textos: #181b1f;
+
+    --botones: #097ed1;
+    --botones_hover: #1d5984;
+
+    --texto_botones_fastbar: #020617b9;
+    --texto_botones_fastbar_hover: #097ed1b9;
+
+    --texto_botones: #020617;
+    --texto_botones_hover: #40008f;
+}
+
+*:hover{
+  transition: 0.5s;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+
+div.general{
+  height: 100vh;
+  position: relative;
+  float: right;
+  width: var(--general_width);
+
+}
+div.info-bar{
+  height: 100vh;
+  position: relative;
+  width: calc(100% - var(--general_width));
+  background: var(--barra_info_color);
+}
+
+details{
+  font-size: 1.2vw;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+
+  position: relative;
+
+  font-size: 1vw;
+  padding: 1% 2%;
+  border-radius: 1vw;
+}
+
+/* ------------------ header -------------- */
+
+header{
+    background-color: var(--top_barr_color);
+}
+
+header img{
+  display:inline-table;
+  width: 10vw;
+  height: 10vw;
+  margin: 2vw 1vw 1vw 5vw; /*for top, right, bottom, left*/
+}
+
+header div{
+    float: right;
+    display:inline-table;
+    color: var(--texto);
+    margin-right: 35vw;
+    margin-top: 2vw;
+    font-family:'Courier New', Courier, monospace;
+}
+
+header h1{
+  font-size: 5vw;
+}
+header h3{
+  margin-left: 3vw;
+  font-size: 3vw;
+}
+
+/* ---------------- parrafos ------------------*/
+
+h3.titulo{
+    font-size: 3vw;
+    text-align: center;
+    margin: 1.5vw 1vw 1vw 1vw; /*for top, right, bottom, left*/
+    border-top: 2px solid var(--textos);
+    border-bottom: 2px solid var(--textos);
+    color:var(--textos);
+}
+h4.titulo{
+    font-size: 2vw;
+    margin: 0vw 1vw 1vw 1vw; /*for top, right, bottom, left*/
+    border-bottom: 2px solid var(--textos);
+    color:var(--textos);
+}
+h4.subtitulo{
+    margin: 0vw 1vw 1vw 1vw; /*for top, right, bottom, left*/
+    color:var(--textos);
+}
+
+p#text_sentral{
+  color: var(--textos);
+  font-size: 1.2vw;
+  margin: 10px 20px;
+}
+
+p#text_sentral ul li{
+  position: relative;
+  color: var(--textos);
+  font-size: 1.2vw;
+  margin: 10px 20px;
+}
+
+/* ---------------- contactes ------------------*/
+
+div#nom_apartat{
+    color: var(--textos);
+    font-size: 2.5vw;
+    padding: 1vw 0vw 1vw 5vw; /*for top, right, bottom, left*/
+}
+
+
+div#contacte{
+  display: flex;
+  align-items: center;
+
+  gap: 1vw;
+  padding-top: 1vw;
+  margin: 0vw 0vw 1vw 2vw; /*for top, right, bottom, left*/
+
+  color: var(--textos);
+}
+
+img.logo_contacte{
+  width: 3vw;
+  height: 3vw;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+a#link_contacte{
+  font-size: 1.2vw;
+  color: var(--textos);
+}
+a#link_contacte:hover{
+  color: var(--texto_botones_hover);
+}
+
