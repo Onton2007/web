@@ -4,3 +4,7 @@ Arriba: 0rem Derecha: 0rem Abajo: 5rem Izquierda: 0rem
 */
     margin: 0rem 0rem 6rem 0rem;
 }
+
+h2 {
+    padding: 49vh 0 0 0; /*for top, right, bottom, left*/
+}
