@@ -40,7 +40,7 @@ div.general{
 
 }
 div.info-bar{
-  height: 100vh;
+  height: calc(100vh+100vh);
   position: relative;
   width: calc(100% - var(--general_width));
   background: var(--barra_info_color);
@@ -160,3 +160,12 @@ a#link_contacte:hover{
   color: var(--texto_botones_hover);
 }
 
+div#descarregar a{
+  color: var(--textos);
+  font-size: 2vw;
+  margin: 0vw 0vw 20vw 0vw;
+  padding: 0vw 0vw 0vw 2.5vw; /*for top, right, bottom, left*/
+}
+div#descarregar a:hover{
+  color: var(--texto_botones_hover);
+}
