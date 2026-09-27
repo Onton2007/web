@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Projecte Final</title>
+  <style>
+    *{
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+    p,img,h3 {
+        margin-top: -0px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      height: 230px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    img { width: 60%; }
+  </style>
+</head>
+<body>
+
+<button onclick="carregar('Lleida')">Carregar temps Lleida</button>
+<div id="contenidor"></div>
+
+<script>
+let apiKey = "31080fc8040b61fe25f2fb3f48d1a006";
+
+function carregar(siti) {
+  let cont = document.getElementById("contenidor");
+  cont.innerHTML = "";
+
+ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${siti}&appid=${apiKey}&units=metric&lang=ca`)
+    .then(res => res.json())
+    .then(data => {
+
+      data.list.forEach(item => {
+
+        let card = document.createElement("div");
+        card.classList.add("card");
+
+        let titol = document.createElement("h3");
+        titol.textContent = item.dt_txt;
+
+        let img = document.createElement("img");
+        img.src = "https://openweathermap.org/img/wn/" + item.weather[0].icon + "@2x.png";
+        
+
+        let desc = document.createElement("p");
+        desc.innerHTML = `${item.weather[0].description} <br> --------------------------- <br> ${item.main.temp}°C`;
+
+        card.appendChild(titol);
+        card.appendChild(img);
+        card.appendChild(desc);
+
+        cont.appendChild(card);
+      });
+
+    });
+}
+</script>
+
+</body>
+</html>
+ 

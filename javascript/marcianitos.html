@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invasors del DOM - Joc 80s</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+        }
+        #info {
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* El "tauler" de joc - Relatiu perquè els elements de dins siguin absoluts a ell */
+        #game-board {
+            width: 600px;
+            height: 400px;
+            background-color: #000;
+            border: 4px solid #0ff;
+            position: relative;
+            overflow: hidden; /* Que no es vegi res fora de la caixa */
+            box-shadow: 0 0 20px #0ff5;
+        }
+
+        /* La nau del jugador */
+        #player {
+            width: 40px;
+            height: 40px;
+            background-color: #0f0;
+            position: absolute;
+            bottom: 10px;
+            left: 280px; /* Al centre (600/2 - 20) */
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Forma de triangle */
+            transition: left 0.1s linear; /* Moviment suau */
+        }
+
+        /* Els projectils */
+        .laser {
+            width: 4px;
+            height: 15px;
+            background-color: #ff0;
+            position: absolute;
+            box-shadow: 0 0 5px #ff0;
+        }
+
+        /* Els enemics */
+        .alien {
+            width: 30px;
+            height: 30px;
+            background-color: #f0f;
+            position: absolute;
+            top: 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #f0f;
+        }
+
+        /* Botó de reinici */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #0ff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover { background-color: #fff; }
+    </style>
+</head>
+<body>
+
+    <h1>INVASORS DEL DOM</h1>
+    
+    <div id="info">
+        <span>Puntuació: <span id="score">0</span></span>
+        <span>Vides: <span id="lives">3</span></span>
+    </div>
+
+    <div id="game-board">
+        <div id="player"></div>
+    </div>
+
+    <button onclick="iniciarJoc()">Tornar a Jugar</button>
+
+<script>
+    const board = document.getElementById("game-board");
+    const player = document.getElementById("player");
+    const scoreDisplay = document.getElementById("score");
+    const livesDisplay = document.getElementById("lives");
+
+    // Variables d'estat del joc
+    let playerPos = 280;
+    let score = 0;
+    let lives = 3;
+    let gameInterval;
+    let alienSpawner;
+    let isGameOver = false;
+
+    // Controls de teclat
+// Controls de teclat millorats
+    document.addEventListener("keydown", (event) => {
+        if (isGameOver) return;
+
+        // Si la tecla és la barra espaiadora
+        if (event.key === " ") {
+            event.preventDefault(); // Evita que la pàgina faci scroll cap a baix
+            
+            // event.repeat és 'true' si estem mantenint la tecla premuda. 
+            // Posant el '!' al davant (que significa "no"), li diem: 
+            // "Dispara NOMÉS si NO s'està repetint la tecla"
+            if (!event.repeat) {
+                disparar();
+            }
+        } 
+        // Moviment de la nau
+        else if (event.key === "ArrowLeft" && playerPos > 10) {
+            playerPos -= 20;
+            player.style.left = playerPos + "px";
+        } 
+        else if (event.key === "ArrowRight" && playerPos < 550) {
+            playerPos += 20;
+            player.style.left = playerPos + "px";
+        }
+    });
+
+    // Crear un element al DOM per fer de làser
+    function disparar() {
+        let laser = document.createElement("div"); // CREAR ELEMENT
+        laser.classList.add("laser");
+        // El col·loquem just damunt de la nau
+        laser.style.left = (playerPos + 18) + "px";
+        laser.style.top = "340px";
+        board.appendChild(laser); // AFEGIR AL DOM
+    }
+
+    // Crear un enemic al DOM
+    function spawnAlien() {
+        let alien = document.createElement("div"); // CREAR ELEMENT
+        alien.classList.add("alien");
+        // Posició X aleatòria
+        let randomX = Math.floor(Math.random() * 560);
+        alien.style.left = randomX + "px";
+        alien.style.top = "0px";
+        board.appendChild(alien); // AFEGIR AL DOM
+    }
+
+    // Funció per comprovar col·lisions entre dos elements del DOM
+    function hanXocat(elem1, elem2) {
+        let rect1 = elem1.getBoundingClientRect(); // Obté les coordenades (caixa forta)
+        let rect2 = elem2.getBoundingClientRect();
+        
+        return !(
+            rect1.top > rect2.bottom ||
+            rect1.right < rect2.left ||
+            rect1.bottom < rect2.top ||
+            rect1.left > rect2.right
+        );
+    }
+
+    // El "Motor" del joc: s'executa contínuament per moure coses
+    function actualitzarJoc() {
+        let lasers = document.querySelectorAll(".laser"); // SELECCIONAR MULTIPLES
+        let aliens = document.querySelectorAll(".alien");
+
+        // 1. Moure els làsers amunt
+        lasers.forEach(laser => {
+            let topPos = parseInt(laser.style.top);
+            if (topPos < 0) {
+                laser.remove(); // ELIMINAR ELEMENT (si surt de la pantalla)
+            } else {
+                laser.style.top = (topPos - 10) + "px"; // Moure
+            }
+        });
+
+        // 2. Moure els aliens avall i comprovar col·lisions
+        aliens.forEach(alien => {
+            let topPos = parseInt(alien.style.top);
+            
+            // Si l'alien arriba a baix, perds una vida
+            if (topPos > 370) {
+                alien.remove(); // ELIMINAR
+                lives--;
+                livesDisplay.textContent = lives; // MODIFICAR CONTINGUT
+                if (lives <= 0) fiDelJoc();
+            } else {
+                alien.style.top = (topPos + 3) + "px"; // Moure avall
+            }
+
+            // Comprovar si un làser toca aquest alien
+            lasers.forEach(laser => {
+                if (hanXocat(laser, alien)) {
+				     // --- INICI CODI DE DEBUG ---
+                      console.log("💥 IMPACTE DETECTAT!");
+                      console.log("Dades del Làser:");
+                      console.dir(laser.getBoundingClientRect()); // Mostra un objecte desplegable amb la posició exacta (x, y, amplada, alçada)
+            
+                      console.log("Dades de l'Alien:");
+                      console.dir(alien); // Desplega TOTES les propietats HTML i JS de l'alien
+            // --- FI CODI DE DEBUG ---
+				
+				
+				
+                    laser.remove(); // ELIMINAR LÀSER
+                    alien.remove(); // ELIMINAR ALIEN
+                    score += 10;
+                    scoreDisplay.textContent = score; // MODIFICAR CONTINGUT
+                }
+            });
+            
+            // Comprovar si l'alien toca el jugador
+            if (hanXocat(alien, player)) {
+                fiDelJoc();
+            }
+        });
+    }
+
+    function fiDelJoc() {
+        isGameOver = true;
+        clearInterval(gameInterval);
+        clearInterval(alienSpawner);
+        alert("GAME OVER! Has aconseguit " + score + " punts. El DOM ha estat envaït.");
+    }
+
+    function iniciarJoc() {
+        // Netejar tauler (eliminar enemics i làsers antics)
+        document.querySelectorAll(".alien, .laser").forEach(el => el.remove());
+        
+        // Restablir variables
+        score = 0;
+        lives = 3;
+        playerPos = 280;
+        isGameOver = false;
+        
+        scoreDisplay.textContent = score;
+        livesDisplay.textContent = lives;
+        player.style.left = playerPos + "px";
+
+        // Parar intervals anteriors per si de cas
+        clearInterval(gameInterval);
+        clearInterval(alienSpawner);
+
+        // Iniciar bucles del joc
+        gameInterval = setInterval(actualitzarJoc, 30); // Actualitza la pantalla cada 30ms
+        alienSpawner = setInterval(spawnAlien, 1000); // Crea un alien cada 1 segon
+    }
+
+    // Començar automàticament
+    iniciarJoc();
+</script>
+
+</body>
+</html>
