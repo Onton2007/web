@@ -27,23 +27,10 @@
         </div>
         <div class="fast_bar">
             <div id="fast_bar"><a id="fast_bar" href="interfas_activitats.html">Activitats</a></div>
-            <div id="fast_bar"><a id="fast_bar" class="RanTraductor" target="_blank">Ran Traductor</a></div>
+            <div id="fast_bar"><a id="fast_bar" href="contactes/crocis.pdf" target="_blank">croquis</a></div>
             <div id="fast_bar"><a id="fast_bar" href="curriculum/curriculum.html">currículum</a></div>
         </div>
     </div>
-
-<script>
-    // Busquem només el primer element que coincideixi amb la classe
-    document.querySelector('.RanTraductor').addEventListener('click', function() {
-        // Canviem la barra invertida per una barra diagonal a la ruta
-        fetch('javascript/ran.js')
-            .then(response => console.log("\ncorrecte"))
-            .catch(error => {
-                console.error('Error:', error);
-                nodeResultat.innerText = "No s'ha pogut connectar amb el servidor Java.";
-            });
-    });
-</script>
 
     <div class="info-bar">
         <img src="fotos/no_foto.png"
