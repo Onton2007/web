@@ -1,12 +1,9 @@
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
 
-exec('libretranslate --get-api-key-link GET_API_KEY_LINK');
-
-
-exec('node test2.js', (error, stdout, stderr) => {
-    if (error) {
-        console.error("Error:", error.message);
-        return;
-    }
-    console.log(stdout);
-});
+try {
+  // Ejecuta el comando, por ejemplo 'ls' en Linux/Mac o 'dir' en Windows
+  const resultado = execSync('libretranslate --get-api-key-link GET_API_KEY_LINK', { encoding: 'utf8' });
+  console.log(resultado);
+} catch (error) {
+  console.error(`Error al ejecutar: ${error.message}`);
+}
