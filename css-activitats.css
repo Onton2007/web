@@ -1,0 +1,226 @@
+
+/* =====================================
+   PÀGINA D'ACTIVITATS HTML
+===================================== */
+
+:root {
+    --fondo_color: #042130;
+    --barra_info_color: #1170a3;
+    --titols: #38bdf8;
+    --texto: #d4dbeb;
+    --textos: #f1f5f9;
+    --botones: #097ed1;
+    --botones_hover: #1d5984;
+}
+
+/* CONFIGURACIÓ GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.activitats {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: radial-gradient(
+        circle at top,
+        #075A87,
+        #042130 65%
+    );
+
+    padding: 35px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* CAPÇALERA */
+
+.capcalera_activitats {
+    width: min(1100px, 100%);
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.capcalera_activitats h1 {
+    color: var(--titols);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    margin-bottom: 12px;
+}
+
+.capcalera_activitats p {
+    color: var(--texto);
+    font-size: 1.1rem;
+}
+
+.progres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.progres span {
+    padding: 7px 18px;
+    border: 1px solid #38bdf850;
+    border-radius: 25px;
+    color: var(--titols);
+    font-size: 0.85rem;
+}
+
+/* CONTINGUT */
+
+.contenidor_activitats {
+    width: min(1100px, 100%);
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* GRUPS */
+
+.grup_activitats {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.grup_activitats h2 {
+    font-size: 1.35rem;
+    color: var(--textos);
+    border-left: 5px solid var(--titols);
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+
+/* GRAELLA */
+
+.graella_activitats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* TARGETES */
+
+.targeta_activitat {
+    min-height: 95px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+    padding: 17px;
+
+    background: var(--barra_info_color);
+    border: 1px solid #38bdf830;
+    border-radius: 13px;
+
+    color: var(--textos);
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.targeta_activitat:hover {
+    background: var(--botones_hover);
+    border-color: var(--titols);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #00000035;
+}
+
+.targeta_activitat .numero {
+    font-size: 0.8rem;
+    color: var(--titols);
+    margin-bottom: 5px;
+}
+
+.targeta_activitat .fletxa {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    color: var(--titols);
+    font-size: 1.2rem;
+}
+
+/* PEU */
+
+.peu_activitats {
+    width: min(1100px, 100%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin: 30px auto 10px;
+}
+
+.peu_activitats a {
+    display: inline-block;
+    padding: 12px 25px;
+
+    color: white;
+    background: var(--botones);
+    border-radius: 30px;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.peu_activitats a:hover {
+    background: var(--titols);
+    color: var(--fondo_color);
+}
+
+/* TABLETS */
+
+@media (max-width: 850px) {
+    .graella_activitats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* MÒBILS */
+
+@media (max-width: 550px) {
+    body.activitats {
+        padding: 20px 12px;
+    }
+
+    .graella_activitats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .targeta_activitat {
+        min-height: 85px;
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .grup_activitats h2 {
+        font-size: 1.15rem;
+    }
+}
+
+/* ACCESSIBILITAT */
+
+@media (prefers-reduced-motion: reduce) {
+    .targeta_activitat,
+    .peu_activitats a {
+        transition: none;
+    }
+}
