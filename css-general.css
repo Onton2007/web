@@ -1,260 +1,501 @@
-:root{
-    --general_width: 75%;
 
-    --fondo_color: #042130;        /* fondo principal */
-    --barra_info_color: #075A87;   /* barra lateral */
-    --fondo_parrafos: #075A87;     /* tarjetas */
-    --fast_bar_color: #041118d2;   /* barra superior */
+:root {
+    /* Colores principales */
+    --primary: #14B004;
+    --primary-light: #38C729;
+    --primary-dark: #0A6B00;
 
-    --titols: #38bdf8;
-    --texto: #e5e7eb;
-    --textos: #f1f5f9;
+    --secondary: #D7A005;
+    --secondary-light: #FFDF68;
 
-    --botones_fastbar: #097ed1ac;
-    --botones_fastbar_hover: #06416bac;
+    --purple: #381393;
+    --purple-light: #7054B3;
 
-    --botones: #097ed1;
-    --botones_hover: #06416b;
+    /* Colores de estructura */
+    --background: #101820;
+    --surface: #19252D;
+    --surface-light: #22333D;
+    --sidebar: #14242C;
 
-    --texto_botones_fastbar: #020617b9;
-    --texto_botones_fastbar_hover: #097ed1b9;
+    --text: #F1F5F9;
+    --text-muted: #AAB7C0;
 
-    --texto_botones: #020617;
-    --texto_botones_hover: #097ed1;
+    --border: rgba(255,255,255,0.09);
+
+    --radius: 18px;
+    --transition: 0.3s ease;
 }
 
-*:hover{
-  transition: 0.5s;
-}
+/* ---------------- GENERAL ---------------- */
 
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1{
-  font-size: 5vw;
+html {
+    scroll-behavior: smooth;
 }
 
-div.general{
-  height: 100vh;
-  position: relative;
-  float: right;
-	width: var(--general_width);
-
-}
-div.info-bar{
-  height: 150vh;
-  position: relative;
-	width: calc(100% - var(--general_width));
-	background: var(--barra_info_color);
-}
-
-details{
-  font-size: 1.2vw;
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
 a {
-  text-align: center;
-  text-decoration: none;
-
-  position: relative;
-
-  font-size: 1vw;
-  padding: 1% 2%;
-  border-radius: 1vw;
+    color: inherit;
+    text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
 
-/* ------------------ barra superoor//fast_bar -------------- */
-div.fast_bar{
-    position:fixed;
-    top: 1%;
-    background-color: var(--fast_bar_color);
-    border-radius: 50px;
-    margin: 1% 12%;
-    padding: 1% 3%;
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+/* ---------------- ESTRUCTURA ---------------- */
+
+body.inici {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    min-height: 100vh;
+}
+
+.general {
+    min-width: 0;
+    min-height: 100vh;
+}
+
+/* ---------------- BARRA LATERAL ---------------- */
+
+.info-bar {
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+
+    min-height: 100vh;
+    padding: 35px 22px;
 
     display: flex;
-    justify-content: center; /* centro horizontal */
-    align-items: center;     /* centro vertical */
-
-    z-index: 10; /* superfisial */
-}
-#fast_bar{
-  font-size: 1.2vw;
-  min-width: 10vw;
-  min-height: 3vw;
-  color: var(--texto_botones_fastbar);
-  background-color: var(--botones_fastbar);
-  padding: 6px 5px;
-  margin: 0 5px;
-
-  display: flex;
-  justify-content: center; /* centro horizontal */
-  align-items: center;     /* centro vertical */
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
 }
 
-div#fast_bar{
-  color:rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
+.persona_logos {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+
+    box-shadow: 0 0 25px #14b00435;
 }
 
-a#fast_bar:hover {
-  background: var(--botones_fastbar_hover);
-  color: var(--texto_botones_fastbar_hover);
+.nombre {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
 }
 
+.descripcion {
+    color: var(--text-muted);
+    text-align: center;
+    font-size: 0.9rem;
+}
 
-/* ------------------ img fondo -------------- */
-nav.cuvrimiento{
-    height: 50%;
+.contactes {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contacte {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px;
+    border-radius: 12px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    transition: var(--transition);
+}
+
+.contacte:hover {
+    background: var(--surface-light);
+    border-color: var(--primary);
+    transform: translateX(4px);
+}
+
+.logo_contacte {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.link_contacte {
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+    color: var(--text);
+}
+
+.link_contacte:hover {
+    color: var(--primary-light);
+}
+
+/* ---------------- CONOCIMIENTOS ---------------- */
+
+.coneixements {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.coneixements h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--primary-light);
+}
+
+.coneixement {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.coneixement summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.coneixement summary:hover {
+    color: var(--primary-light);
+}
+
+.coneixement meter {
+    width: 100%;
+    height: 12px;
+    margin-top: 12px;
+    accent-color: var(--primary);
+}
+
+/* ---------------- BARRA SUPERIOR ---------------- */
+
+.fast_bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding: 15px;
+
+    background: #101820eF;
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--border);
 }
 
-img.fondo_img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  z-index: -1;
+.fast_link {
+    padding: 10px 20px;
+    border-radius: 30px;
+
+    background: var(--surface-light);
+    color: var(--text);
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    transition: var(--transition);
 }
 
-/* ---------------- parrafos ------------------*/
+.fast_link:hover {
+    background: var(--primary);
+    color: #071207;
+    transform: translateY(-3px);
+}
 
-div.parrafos_part{
-    height: 100%;
-    width: 100%;
+/* ---------------- PORTADA ---------------- */
 
-    background-color: var(--fondo_color);
+.portada {
+    min-height: 480px;
+    position: relative;
 
     display: flex;
-    flex-direction: column;   /* columna */
     align-items: center;
+    justify-content: center;
+
+    padding: 60px 30px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(4,20,15,0.88),
+            rgba(10,30,35,0.65)
+        ),
+        url("fotos/fondo_inisi.png") center/cover no-repeat;
 }
 
-div.parraf{
-  
-  border-radius: 20px;
-  margin: 2vw 5vw;
-  padding: 1vw 1vw;
-
-  background-color: var(--fondo_parrafos);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.portada_contenido {
+    width: min(850px, 100%);
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-div.parraf p{
-  color: var(--texto);
-  font-size: 1.2vw;
-  margin: 10px 20px;
+.portada h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin-bottom: 20px;
 }
 
-/* ---------------- contactes ------------------*/
-
-div#contacte{
-  display: flex;
-  align-items: center;
-
-  gap: 1vw;
-  margin: 1vw;
-
-  color: var(--textos);
+.portada h1 span {
+    color: var(--primary-light);
 }
 
-img.logo_contacte{
-  width: 3vw;
-  height: 3vw;
-  object-fit: cover;
-  border-radius: 50%;
-}
-img.persona_logos{
-  width: 10vw;
-  height: 10vw;
-  margin: 1vw 0vw 1vw 5vw; /*for top, right, bottom, left*/
-  object-fit: cover;
+.portada p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text);
+    max-width: 650px;
+    margin: 0 auto 30px;
 }
 
-a#link_contacte{
-  font-size: 1.2vw;
-  color: var(--textos);
-}
-a#link_contacte:hover{
-  color: var(--texto_botones_hover);
-}
+.boton {
+    display: inline-block;
+    padding: 13px 25px;
 
+    background: var(--primary);
+    color: #061306;
 
-/* ------------ activitats ------------------ */
+    border-radius: 30px;
+    font-weight: bold;
 
-body.activitats{
-  background-color: var(--fondo_color);
-
-  display: flex;
-  flex-direction: column;   /* columna */
-  align-items: center;
+    transition: var(--transition);
 }
 
-body.activitats h1{
-  margin: 3vw 3vw;
-  color: var(--titols);
-  font-family: 'Courier New', Courier, monospace;
+.boton:hover {
+    background: var(--secondary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #d7a00540;
 }
 
-body.activitats a#completad{
-  font-size: 1.1vw;
-  color: #05C400;
-}
-body.activitats a#nocompletad{
-  font-size: 1.1vw;
-  color: #ff0000;
+/* ---------------- CONTENIDO ---------------- */
+
+.parrafos_part {
+    padding: 60px clamp(20px, 5vw, 75px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-body.activitats a#surtida{
-  font-size: 2vw;
-  color: var(--texto_botones);
-  background-color: var(--botones);
-  margin: 10px 10px;
+.seccion_titulo {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary-light);
 }
 
-body.activitats a#surtida:hover{
-  color: var(--texto_botones_hover);
-  background-color: var(--botones_hover);
+.seccion_subtitulo {
+    color: var(--text-muted);
+    margin-bottom: 25px;
 }
 
-body.activitats a:hover{
-  color: var(--texto_botones_hover);
+.parraf {
+    padding: 28px;
+    border-radius: var(--radius);
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    transition: var(--transition);
+}
+
+.parraf:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 30px #00000030;
+}
+
+.parraf h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-light);
+    margin-bottom: 12px;
+}
+
+.parraf p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* ---------------- ACTIVITATS ---------------- */
+
+body.activitats {
+    min-height: 100vh;
+    background: var(--background);
+    padding: 30px;
+}
+
+body.activitats h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: var(--primary-light);
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 body.activitats table {
-  border-spacing: 10px;
-  width: 100%;
-  table-layout: fixed;   /* columnas rectas */
+    width: min(1000px, 100%);
+    margin: auto;
+    border-spacing: 12px;
+    table-layout: fixed;
 }
 
-body.activitats table td {
-  text-align: center;
-  border: 4px solid var(--botones_hover);
-  background-color: var(--botones);
-  border-radius: 0.5vw;
-  padding: 0.5vw 0.5vw;
+body.activitats td {
+    text-align: center;
+    padding: 20px 10px;
 
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    transition: var(--transition);
 }
 
-body.activitats table td:hover {
-  background-color: var(--botones_hover);
-  border: 2px solid var(--botones);
+body.activitats td:hover {
+    background: var(--surface-light);
+    border-color: var(--primary);
+    transform: translateY(-3px);
 }
 
-body.activitats div{
-  margin-left: 3vw;
-  margin-right: 3vw;
-  margin-bottom: 10vw;
+body.activitats a {
+    font-size: 1rem;
 }
 
+body.activitats a#completad {
+    color: var(--primary-light);
+}
+
+body.activitats a#nocompletad {
+    color: #FF6464;
+}
+
+body.activitats a#surtida {
+    display: inline-block;
+    background: var(--primary);
+    color: #061306;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin: 15px;
+    font-weight: bold;
+}
+
+body.activitats a#surtida:hover {
+    background: var(--secondary);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 850px) {
+
+    body.inici {
+        grid-template-columns: 1fr;
+    }
+
+    .info-bar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .contactes {
+        max-width: 500px;
+    }
+
+    .coneixements {
+        max-width: 500px;
+    }
+
+    .fast_bar {
+        position: sticky;
+    }
+
+    .portada {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .info-bar {
+        padding: 25px 15px;
+    }
+
+    .fast_bar {
+        gap: 6px;
+        padding: 10px 5px;
+    }
+
+    .fast_link {
+        font-size: 0.8rem;
+        padding: 9px 12px;
+    }
+
+    .portada {
+        min-height: 350px;
+        padding: 35px 18px;
+    }
+
+    .parrafos_part {
+        padding: 35px 15px;
+    }
+
+    .parraf {
+        padding: 20px;
+    }
+
+    body.activitats {
+        padding: 10px;
+    }
+
+    body.activitats table {
+        border-spacing: 5px;
+    }
+
+    body.activitats td {
+        padding: 12px 5px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* ---------------- ACCESIBILITAT ---------------- */
+
+a:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

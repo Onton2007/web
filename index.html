@@ -1,126 +1,254 @@
+
 <!DOCTYPE html>
+<html lang="ca">
 
-<html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="css-general.css">
-     <link rel="icon" type="ico" href="icono/favicon.ico"></link>
-     <title>Maxim Guiu main</title>
- </head>
- <body>
-    <div class="general">
-        <nav class="cuvrimiento">
-            <img src="fotos/fondo_inisi.png" 
-             class="fondo_img" alt="Imagen de fondo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfolio personal de Maxim Guiu">
+
+    <link rel="stylesheet" href="css-general.css">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="icono/favicon.ico">
+
+    <title>Maxim Guiu | Portfolio</title>
+</head>
+
+<body class="inici">
+
+    <!-- BARRA LATERAL -->
+    <aside class="info-bar">
+
+        <img src="fotos/MyFoto.png"
+             class="persona_logos"
+             alt="Fotografia de Maxim">
+
+        <h2 class="nombre">Maxim Guiu</h2>
+
+        <p class="descripcion">
+            Estudiant i desenvolupador web en formació
+        </p>
+
+        <!-- CONTACTES -->
+        <div class="contactes">
+
+            <a class="contacte"
+               href="https://telegram.org/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="fotos/telegrame.png"
+                     class="logo_contacte"
+                     alt="Telegram">
+
+                <span class="link_contacte">
+                    Telegram
+                </span>
+            </a>
+
+            <a class="contacte"
+               href="https://www.linkedin.com/in/maximus-guiu-b2985a437/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="fotos/linkedin.png"
+                     class="logo_contacte"
+                     alt="Linkedin">
+
+                <span class="link_contacte">
+                    Linkedin
+                </span>
+            </a>
+
+            <a class="contacte"
+               href="https://www.instagram.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="fotos/Instagram_logo.svg.png"
+                     class="logo_contacte"
+                     alt="Instagram">
+
+                <span class="link_contacte">
+                    Instagram
+                </span>
+            </a>
+
+        </div>
+
+        <!-- CONEIXEMENTS -->
+        <section class="coneixements">
+
+            <h3>Els meus coneixements</h3>
+
+            <details class="coneixement">
+                <summary>HTML / CSS</summary>
+
+                <meter min="0"
+                       max="100"
+                       low="30"
+                       high="60"
+                       optimum="90"
+                       value="65">
+                </meter>
+
+                <p>65% de coneixement</p>
+            </details>
+
+            <details class="coneixement">
+                <summary>Photoshop / Gimp</summary>
+
+                <meter min="0"
+                       max="100"
+                       low="30"
+                       high="60"
+                       optimum="90"
+                       value="30">
+                </meter>
+
+                <p>30% de coneixement</p>
+            </details>
+
+            <details class="coneixement">
+                <summary>Altres habilitats</summary>
+
+                <meter min="0"
+                       max="100"
+                       value="70">
+                </meter>
+
+                <p>70% de coneixement</p>
+            </details>
+
+        </section>
+
+    </aside>
+
+
+    <!-- CONTINGUT PRINCIPAL -->
+    <main class="general">
+
+        <!-- NAVEGACIÓ -->
+        <nav class="fast_bar"
+             aria-label="Navegació principal">
+
+            <a class="fast_link"
+               href="#inici">
+                Inici
+            </a>
+
+            <a class="fast_link"
+               href="#sobre-mi">
+                Sobre mi
+            </a>
+
+            <a class="fast_link"
+               href="interfas_activitats.html">
+                Activitats
+            </a>
+
+            <!-- <a class="fast_link"
+               href="contactes/crocis.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Croquis
+            </a> -->
+
+            <a class="fast_link"
+               href="curriculum/curriculum.html">
+                Currículum
+            </a>
+
         </nav>
-        <div class="parrafos_part">
-            <div class="parraf">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur voluptatum error ad animi, labore adipisci ipsa aut cum quis? Quae, enim natus! Sequi laborum fugit ratione ab quidem odit!</p>
-            </div>
-            <div class="parraf">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur voluptatum error ad animi, labore adipisci ipsa aut cum quis? Quae, enim natus! Sequi laborum fugit ratione ab quidem odit!</p>
-            </div>
-            <div class="parraf">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur voluptatum error ad animi, labore adipisci ipsa aut cum quis? Quae, enim natus! Sequi laborum fugit ratione ab quidem odit!</p>
-            </div>
-        </div>
-        <div class="fast_bar">
-            <div id="fast_bar"><a id="fast_bar" href="interfas_activitats.html">Activitats</a></div>
-            <div id="fast_bar"><a id="fast_bar" href="contactes/crocis.pdf" target="_blank">croquis</a></div>
-            <div id="fast_bar"><a id="fast_bar" href="curriculum/curriculum.html">currículum</a></div>
-        </div>
-    </div>
 
-    <div class="info-bar">
-        <img src="fotos/no_foto.png"
-        class="persona_logos" alt="Imagen de fondo">
-        <div id="contacte">
-            <table>
-                <tbody>
-                    <tr>
-                        <td><img src="fotos/tviter.png"
-                            class="logo_contacte" alt="Imagen de fondo"></td>
-                        <td><a id="link_contacte" href="https://telegram.org/support"> usertelegram@telegram.com </a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="contacte">
-            <table>
-                <tbody>
-                    <tr>
-                        <td><img src="fotos/facebook.png" 
-                            class="logo_contacte" alt="Imagen de fondo"></td>
-                        <td><a id="link_contacte" href="https://www.facebook.com/"> userfecebook@fecebook.com </a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="contacte">
-            <table>
-                <tbody>
-                    <tr>
-                        <td><img src="fotos/Instagram_logo.svg.png" 
-                            class="logo_contacte" alt="Imagen de fondo"></td>
-                        <td><a id="link_contacte" href="
-                            https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fm%2Fusername%3F__coig_login%3D1#
-                            "> userinstagram@instagram.com </a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="contacte">
-            <details>
-                <summary>Nivel de conocimiento en HTML</summary>
-                <label>
-                    <meter
-                        id="Nivel_HTML"
-                        min="0"
-                        max="100"
-                        low="30"
-                        high="60"
-                        optimum="90"
-                        value="65"
-                    >
-                    </meter>
-                </label>
-            </details>
-        </div>
-        <div id="contacte">
-            <details>
-                <summary>Conocimiento sobre Photoshop/Gimp</summary>
-                <label>
-                    <meter
-                        id="Nivel_Photoshop"
-                        min="0"
-                        max="100"
-                        low="30"
-                        high="60"
-                        optimum="90"
-                        value="30"
-                    >
-                    </meter>
-                </label>
-            </details>
-        </div>
-        <div id="contacte">
-            <details>
-                <summary>Salud</summary>
-                <label>
-                    <meter
-                        id="Nivel_Salud"
-                        min="0"
-                        max="100"
-                        low="30"
-                        high="60"
-                        optimum="90"
-                        value="70"
-                    >
-                    </meter>
-                </label>
-            </details>
-        </div>
-    </div>
- </body>
+
+        <!-- PORTADA -->
+        <header class="portada" id="inici">
+
+            <div class="portada_contenido">
+
+                <h1>
+                    Hola, sóc <span>Maxim Guiu</span>
+                </h1>
+
+                <p>
+                    Benvingut a la meva pàgina personal.
+                    Aquí podràs conèixer una mica més sobre mi,
+                    els meus projectes i les meves activitats.
+                </p>
+
+                <a href="#sobre-mi"
+                   class="boton">
+                    Descobreix més
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- PRESENTACIÓ -->
+        <section class="parrafos_part"
+                 id="sobre-mi">
+
+            <div>
+                <h2 class="seccion_titulo">
+                    Sobre mi
+                </h2>
+
+                <p class="seccion_subtitulo">
+                    Coneix-me una mica millor.
+                </p>
+            </div>
+
+
+            <article class="parraf">
+
+                <h3>Qui sóc?</h3>
+
+                <p>
+                    Sóc Maxim Guiu i aquesta és la meva pàgina
+                    personal. Aquí comparteixo informació sobre
+                    mi, els meus interessos i les coses que vaig
+                    aprenent.
+                </p>
+
+            </article>
+
+
+            <article class="parraf">
+
+                <h3>Els meus projectes</h3>
+
+                <p>
+                    En aquesta pàgina trobaràs diferents
+                    activitats i projectes que he anat
+                    desenvolupant. Alguns estan relacionats
+                    amb el disseny i la programació web.
+                </p>
+
+            </article>
+
+
+            <article class="parraf">
+
+                <h3>Els meus objectius</h3>
+
+                <p>
+                    Continuar aprenent, millorar les meves
+                    habilitats i desenvolupar projectes
+                    cada vegada més complets i professionals.
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
 </html>

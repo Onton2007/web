@@ -1,20 +1,99 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-interfas_activitats.css">
-    <link rel="icon" type="ico" href="icono/tic.ico"></link>
-    <title>Document</title>
-</head>
-<body class="activitats">
-    <div>
-    <a id="a_activitats" href="html/activitats.html">"Anar a activitats HTML"</a>
-    <a id="a_activitats" href="css/activitats.html">"Anar a activitats CSS"</a>
-    </div>
 
-    <div>
-        <a id="surtida" href="index.html">PORTAFOLI</a>
-    </div>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Menú d'activitats HTML i CSS de Maxim Guiu">
+
+    <link rel="stylesheet"
+          href="css-interfas_activitats.css">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="icono/tic.ico">
+
+    <title>Activitats | Maxim Guiu</title>
+</head>
+
+<body class="activitats">
+
+    <!-- TITOL -->
+    <header class="titol">
+
+        <h1>Les meves activitats</h1>
+
+        <p>
+            Selecciona el tipus d'activitats que vols consultar.
+        </p>
+
+    </header>
+
+
+    <!-- TARGETES -->
+    <main class="contenidor">
+
+        <!-- HTML -->
+        <article class="targeta">
+
+            <div class="icona">
+                5
+            </div>
+
+            <h2>HTML</h2>
+
+            <p>
+                Consulta les activitats relacionades
+                amb l'estructura i el contingut de les
+                pàgines web.
+            </p>
+
+            <a class="boto_activitat"
+               href="html/activitats.html">
+                Anar a activitats HTML →
+            </a>
+
+        </article>
+
+
+        <!-- CSS -->
+        <article class="targeta">
+
+            <div class="icona">
+                #
+            </div>
+
+            <h2>CSS</h2>
+
+            <p>
+                Consulta les activitats relacionades
+                amb els estils, els colors i el disseny
+                de les pàgines web.
+            </p>
+
+            <a class="boto_activitat"
+               href="css/activitats.html">
+                Anar a activitats CSS →
+            </a>
+
+        </article>
+
+    </main>
+
+
+    <!-- TORNAR AL PORTFOLI -->
+    <footer class="sortida">
+
+        <a href="index.html">
+            ← Tornar al portfoli
+        </a>
+
+    </footer>
+
 </body>
 </html>

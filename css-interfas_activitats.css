@@ -1,10 +1,11 @@
-:root{
+
+:root {
     --general_width: 75%;
 
-    --fondo_color: #042130;        /* fondo principal */
-    --barra_info_color: #075A87;   /* barra lateral */
-    --fondo_parrafos: #075A87;     /* tarjetas */
-    --fast_bar_color: #041118;   /* barra superior */
+    --fondo_color: #042130;
+    --barra_info_color: #075A87;
+    --fondo_parrafos: #075A87;
+    --fast_bar_color: #041118;
 
     --titols: #38bdf8;
     --texto: #e5e7eb;
@@ -14,65 +15,240 @@
     --botones_hover: #06416b;
 
     --texto_botones: #020617;
-    --texto_botones_hover: #097ED1;
+    --texto_botones_hover: #ffffff;
+
+    /* Nuevos colores */
+    --tarjeta: #075A87;
+    --tarjeta_hover: #0875ad;
+    --borde: #38bdf8;
+    --sombra: rgba(0, 0, 0, 0.3);
 }
 
-/* ------------ interfas activitats ----------- */
+/* ------------ GENERAL ----------- */
 
-body {
-  max-height: 100%;
-  max-width: 100%;
-  background-color: var(--fondo_color);
-
-  display: block;
-  justify-content: center;
-  align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  text-align: center;
-  text-decoration: none;
-
-  position: relative;
-
-  font-size: 1vw;
-  padding: 1% 2%;
-  border-radius: 1vw;
+html {
+    min-height: 100%;
 }
 
+body.activitats {
+    min-height: 100vh;
+    width: 100%;
 
+    background:
+        radial-gradient(
+            circle at top,
+            #075A87 0%,
+            #042130 65%
+        );
 
+    color: var(--textos);
+    font-family: Arial, Helvetica, sans-serif;
 
-div{
-  background-color: var(--fondo_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+    padding: 35px 20px;
 }
 
-a#a_activitats {
-  margin: 10vw;
+/* ------------ TITOL ----------- */
 
-  font-size: 3vw;
-  
-  background-color: var(--botones);
-  color: var(--texto_botones);
-}
-a#a_activitats:hover {
-  background-color: var(--botones_hover);
-  color: var(--texto_botones_hover);
+.titol {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-a#surtida{
-  font-size: 2.5vw;
-  padding: 2vw;
-  color: var(--texto_botones);
-  background-color: var(--botones);
-  margin: 10vw 0vw 10vw 41vw;
+.titol h1 {
+    color: var(--titols);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    margin-bottom: 15px;
 }
 
-a#surtida:hover{
-  color: var(--texto_botones_hover);
-  background-color: var(--botones_hover);
+.titol p {
+    color: var(--texto);
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
+}
+
+/* ------------ TARGETES ----------- */
+
+.contenidor {
+    width: min(100%, 950px);
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+    margin: 45px auto;
+}
+
+.targeta {
+    min-height: 300px;
+
+    background: var(--tarjeta);
+    border: 2px solid transparent;
+    border-radius: 22px;
+
+    padding: 35px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px var(--sombra);
+
+    transition: 0.3s ease;
+}
+
+.targeta:hover {
+    transform: translateY(-10px);
+
+    background: var(--tarjeta_hover);
+    border-color: var(--borde);
+
+    box-shadow: 0 18px 40px var(--sombra);
+}
+
+/* ------------ ICONES ----------- */
+
+.icona {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3.5rem;
+    font-weight: bold;
+
+    background: var(--fondo_color);
+    color: var(--titols);
+
+    margin-bottom: 25px;
+}
+
+/* ------------ TEXT TARGETES ----------- */
+
+.targeta h2 {
+    color: var(--textos);
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.targeta p {
+    color: var(--texto);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ------------ BOTONS ----------- */
+
+.boto_activitat {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: var(--botones);
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.boto_activitat:hover {
+    background: var(--titols);
+    color: var(--fondo_color);
+
+    transform: scale(1.06);
+}
+
+/* ------------ TORNAR ----------- */
+
+.sortida {
+    margin-top: 15px;
+}
+
+.sortida a {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    background: transparent;
+    color: var(--texto);
+
+    border: 2px solid var(--botones);
+    border-radius: 30px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.sortida a:hover {
+    background: var(--botones);
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+/* ------------ RESPONSIVE ----------- */
+
+@media (max-width: 650px) {
+
+    body.activitats {
+        padding: 35px 15px;
+    }
+
+    .contenidor {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 30px auto;
+    }
+
+    .targeta {
+        min-height: 250px;
+    }
+
+    .icona {
+        width: 70px;
+        height: 70px;
+        font-size: 2.7rem;
+    }
+
+    .targeta h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ------------ ACCESSIBILITAT ----------- */
+
+a:focus-visible {
+    outline: 3px solid var(--titols);
+    outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
 }
