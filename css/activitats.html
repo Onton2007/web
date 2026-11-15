@@ -1,103 +1,534 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css-general.css">
-    <link rel="icon" type="ico" href="../icono/meca.ico"></link>
-    <title>CSS-ACTIVITATS</title>
+
+    <link rel="stylesheet" href="../css-activitats.css">
+    <link rel="icon" type="image/x-icon" href="../icono/meca.ico">
+
+    <title>Activitats CSS | Maxim Guiu</title>
 </head>
+
 <body class="activitats">
-    <h1>ACTIVITATS CSS</h1>
-    <div>
-    <table>
-        <tbody>
-            <tr>
-            <td><a id="completad" href="3_selectores/ex3_1/ex3_1.html">Anar a activitat 01</a></td>
-            <td><a id="completad" href="3_selectores/ex3_2/ex3_2.html">Anar a activitat 02</a></td>
-            <td><a id="completad" href="3_selectores/ex3_3/ex3_3.html">Anar a activitat 03</a></td>
 
-            <td><a id="completad" href="4_variables/ex4_1/ex4_1.html">Anar a activitat 04</a></td>
-            <td><a id="completad" href="4_variables/ex4_2/ex4_2.html">Anar a activitat 05</a></td>
+    <header class="capcalera_activitats">
 
-            <td><a id="completad" href="6_bem/ex6_1/ex6_1.html">Anar a activitat 06</a></td>
-            <td><a id="completad" href="6_bem/ex6_2/ex6_2.html">Anar a activitat 07</a></td>
+        <h1>ACTIVITATS CSS</h1>
 
-            <td><a id="completad" href="7_color/ex7_1/ex7_1.html">Anar a activitat 08</a></td>
-            <td><a id="completad" href="7_color/ex7_2/ex7_2.html">Anar a activitat 09</a></td>
-            </tr>
-            <tr>
-            <td><a id="completad" href="7_color/ex7_3/ex7_3.html">Anar a activitat 10</a></td>
+        <p>Exercicis i pràctiques de disseny web</p>
 
-            <td><a id="completad" href="8_texto/ex8_1/ex8_1.html">Anar a activitat 11</a></td>
-            <td><a id="completad" href="8_texto/ex8_2/ex8_2.html">Anar a activitat 12</a></td>
-            <td><a id="completad" href="8_texto/ex8_3/ex8_3.html">Anar a activitat 13</a></td>
-            <td><a id="completad" href="8_texto/ex8_4/ex8_4.html">Anar a activitat 14</a></td>
-            <td><a id="completad" href="8_texto/ex8_5/ex8_5.html">Anar a activitat 15</a></td>
+        <div class="progres">
+            <span>54 activitats</span>
+            <span>CSS · Pràctica</span>
+            <span>27 completades</span>
+        </div>
 
-            <td><a id="completad" href="9_medidas/ex9_1/ex9_1.html">Anar a activitat 16</a></td>
-            <td><a id="completad" href="9_medidas/ex9_2/ex9_2.html">Anar a activitat 17</a></td>
-            <td><a id="completad" href="9_medidas/ex9_3/ex9_3.html">Anar a activitat 18</a></td>
-            </tr>
-            <tr>
-            <td><a id="completad" href="9_medidas/ex9_4/ex9_4.html">Anar a activitat 19</a></td>
+    </header>
 
-            <td><a id="completad" href="10_imagenes/ex10_1/ex10_1.html">Anar a activitat 20</a></td>
-            <td><a id="completad" href="10_imagenes/ex10_2/ex10_2.html">Anar a activitat 21</a></td>
+    <main class="contenidor_activitats">
 
-            <td><a id="completad" href="11_display/ex11_1/ex11_1.html">Anar a activitat 22</a></td>
-            <td><a id="completad" href="11_display/ex11_2/ex11_2.html">Anar a activitat 23</a></td>
-            <td><a id="completad" href="11_display/ex11_3/ex11_3.html">Anar a activitat 24</a></td>
+        <!-- SELECTORS -->
+        <section class="grup_activitats">
+            <h2>03 · Selectors</h2>
 
-            <td><a id="completad" href="12_margin/ex12_1/ex12_1.html">Anar a activitat 25</a></td>
-            <td><a id="completad" href="12_margin/ex12_2/ex12_2.html">Anar a activitat 26</a></td>
-            <td><a id="completad" href="12_margin/ex12_3/ex12_3.html">Anar a activitat 27</a></td>
+            <div class="graella_activitats">
 
-            </tr>
-            <tr>
-            <td><a id="nocompletad" href="13_padding/ex13_1/ex13_1.html">Anar a activitat 28</a></td>
-            <td><a id="nocompletad" href="13_padding/ex13_1/ex13_1.html">Anar a activitat 29</a></td>
-            <td><a id="nocompletad" href="13_padding/ex13_2/ex13_2.html">Anar a activitat 30</a></td>
+                <a href="3_selectores/ex3_1/ex3_1.html" class="targeta_activitat completada">
+                    <span class="numero">01</span>
+                    <span>Activitat 01</span>
+                    <span class="estat">Completada</span>
+                </a>
 
-            <td><a id="nocompletad" href="14_border/ex14_1/ex14_1.html">Anar a activitat 31</a></td>
-            <td><a id="nocompletad" href="14_border/ex14_2/ex14_2.html">Anar a activitat 32</a></td>
-            <td><a id="nocompletad" href="14_border/ex14_3/ex14_3.html">Anar a activitat 33</a></td>
-            <td><a id="nocompletad" href="14_border/ex14_4/ex14_4.html">Anar a activitat 34</a></td>
+                <a href="3_selectores/ex3_2/ex3_2.html" class="targeta_activitat completada">
+                    <span class="numero">02</span>
+                    <span>Activitat 02</span>
+                    <span class="estat">Completada</span>
+                </a>
 
-            <td><a id="nocompletad" href="16_listas/ex16_1/ex16_1.html">Anar a activitat 35</a></td>
-            <td><a id="nocompletad" href="16_listas/ex16_2/ex16_2.html">Anar a activitat 36</a></td>
-            </tr>
-            <tr>
-            <td><a id="nocompletad" href="16_listas/ex16_3/ex16_3.html">Anar a activitat 37</a></td>
-            <td><a id="nocompletad" href="16_listas/ex16_4/ex16_4.html">Anar a activitat 38</a></td>
+                <a href="3_selectores/ex3_3/ex3_3.html" class="targeta_activitat completada">
+                    <span class="numero">03</span>
+                    <span>Activitat 03</span>
+                    <span class="estat">Completada</span>
+                </a>
 
-            <td><a id="nocompletad" href="17_overflow/ex17_1/ex17_1.html">Anar a activitat 39</a></td>
-            <td><a id="nocompletad" href="17_overflow/ex17_2/ex17_2.html">Anar a activitat 40</a></td>
+            </div>
+        </section>
 
-            <td><a id="nocompletad" href="19_filters/ex19_1/ex19_1.html">Anar a activitat 41</a></td>
-            <td><a id="nocompletad" href="19_filters/ex19_2/ex19_2.html">Anar a activitat 42</a></td>
+        <!-- VARIABLES -->
+        <section class="grup_activitats">
+            <h2>04 · Variables</h2>
 
-            <td><a id="nocompletad" href="20_transform/ex20_1/ex20_1.html">Anar a activitat 43</a></td>
-            <td><a id="nocompletad" href="20_transform/ex20_2/ex20_2.html">Anar a activitat 44</a></td>
-            <td><a id="nocompletad" href="20_transform/ex20_3/ex20_3.html">Anar a activitat 45</a></td>
-            </tr>
-            <tr>
+            <div class="graella_activitats">
 
-            <td><a id="nocompletad" href="21_transition/ex21_1/ex21_1.html">Anar a activitat 46</a></td>
+                <a href="4_variables/ex4_1/ex4_1.html" class="targeta_activitat completada">
+                    <span class="numero">04</span>
+                    <span>Activitat 04</span>
+                    <span class="estat">Completada</span>
+                </a>
 
-            <td><a id="nocompletad" href="25_herramientas_avanzadas/ex25_1/ex25_1.html">Anar a activitat 47</a></td>
-            <td><a id="nocompletad" href="25_herramientas_avanzadas/ex25_2/ex25_2.html">Anar a activitat 48</a></td>
-            <td><a id="nocompletad" href="25_herramientas_avanzadas/ex25_3/ex25_3.html">Anar a activitat 49</a></td>
-            <td><a id="nocompletad" href="25_herramientas_avanzadas/ex25_4/ex25_4.html">Anar a activitat 50</a></td>
-            <td><a id="nocompletad" href="25_herramientas_avanzadas/ex25_5/ex25_5.html">Anar a activitat 51</a></td>
-            <td><a id="nocompletad" href="25_herramientas_avanzadas/ex25_6/ex25_6.html">Anar a activitat 52</a></td>
+                <a href="4_variables/ex4_2/ex4_2.html" class="targeta_activitat completada">
+                    <span class="numero">05</span>
+                    <span>Activitat 05</span>
+                    <span class="estat">Completada</span>
+                </a>
 
-            <td><a id="nocompletad" href="26_3d/ex26_1/ex26_1.html">Anar a activitat 53</a></td>
-            <td><a id="nocompletad" href="26_3d/ex26_2/ex26_2.html">Anar a activitat 54</a></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-    <a id="surtida" href="../interfas_activitats.html">interfas</a>
+            </div>
+        </section>
+
+        <!-- BEM -->
+        <section class="grup_activitats">
+            <h2>06 · BEM</h2>
+
+            <div class="graella_activitats">
+
+                <a href="6_bem/ex6_1/ex6_1.html" class="targeta_activitat completada">
+                    <span class="numero">06</span>
+                    <span>Activitat 06</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="6_bem/ex6_2/ex6_2.html" class="targeta_activitat completada">
+                    <span class="numero">07</span>
+                    <span>Activitat 07</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- COLORS -->
+        <section class="grup_activitats">
+            <h2>07 · Colors</h2>
+
+            <div class="graella_activitats">
+
+                <a href="7_color/ex7_1/ex7_1.html" class="targeta_activitat completada">
+                    <span class="numero">08</span>
+                    <span>Activitat 08</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="7_color/ex7_2/ex7_2.html" class="targeta_activitat completada">
+                    <span class="numero">09</span>
+                    <span>Activitat 09</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="7_color/ex7_3/ex7_3.html" class="targeta_activitat completada">
+                    <span class="numero">10</span>
+                    <span>Activitat 10</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- TEXT -->
+        <section class="grup_activitats">
+            <h2>08 · Text</h2>
+
+            <div class="graella_activitats">
+
+                <a href="8_texto/ex8_1/ex8_1.html" class="targeta_activitat completada">
+                    <span class="numero">11</span>
+                    <span>Activitat 11</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="8_texto/ex8_2/ex8_2.html" class="targeta_activitat completada">
+                    <span class="numero">12</span>
+                    <span>Activitat 12</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="8_texto/ex8_3/ex8_3.html" class="targeta_activitat completada">
+                    <span class="numero">13</span>
+                    <span>Activitat 13</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="8_texto/ex8_4/ex8_4.html" class="targeta_activitat completada">
+                    <span class="numero">14</span>
+                    <span>Activitat 14</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="8_texto/ex8_5/ex8_5.html" class="targeta_activitat completada">
+                    <span class="numero">15</span>
+                    <span>Activitat 15</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- MESURES -->
+        <section class="grup_activitats">
+            <h2>09 · Mesures</h2>
+
+            <div class="graella_activitats">
+
+                <a href="9_medidas/ex9_1/ex9_1.html" class="targeta_activitat completada">
+                    <span class="numero">16</span>
+                    <span>Activitat 16</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="9_medidas/ex9_2/ex9_2.html" class="targeta_activitat completada">
+                    <span class="numero">17</span>
+                    <span>Activitat 17</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="9_medidas/ex9_3/ex9_3.html" class="targeta_activitat completada">
+                    <span class="numero">18</span>
+                    <span>Activitat 18</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="9_medidas/ex9_4/ex9_4.html" class="targeta_activitat completada">
+                    <span class="numero">19</span>
+                    <span>Activitat 19</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- IMATGES -->
+        <section class="grup_activitats">
+            <h2>10 · Imatges</h2>
+
+            <div class="graella_activitats">
+
+                <a href="10_imagenes/ex10_1/ex10_1.html" class="targeta_activitat completada">
+                    <span class="numero">20</span>
+                    <span>Activitat 20</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="10_imagenes/ex10_2/ex10_2.html" class="targeta_activitat completada">
+                    <span class="numero">21</span>
+                    <span>Activitat 21</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- DISPLAY -->
+        <section class="grup_activitats">
+            <h2>11 · Display</h2>
+
+            <div class="graella_activitats">
+
+                <a href="11_display/ex11_1/ex11_1.html" class="targeta_activitat completada">
+                    <span class="numero">22</span>
+                    <span>Activitat 22</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="11_display/ex11_2/ex11_2.html" class="targeta_activitat completada">
+                    <span class="numero">23</span>
+                    <span>Activitat 23</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="11_display/ex11_3/ex11_3.html" class="targeta_activitat completada">
+                    <span class="numero">24</span>
+                    <span>Activitat 24</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- MARGIN -->
+        <section class="grup_activitats">
+            <h2>12 · Margin</h2>
+
+            <div class="graella_activitats">
+
+                <a href="12_margin/ex12_1/ex12_1.html" class="targeta_activitat completada">
+                    <span class="numero">25</span>
+                    <span>Activitat 25</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="12_margin/ex12_2/ex12_2.html" class="targeta_activitat completada">
+                    <span class="numero">26</span>
+                    <span>Activitat 26</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+                <a href="12_margin/ex12_3/ex12_3.html" class="targeta_activitat completada">
+                    <span class="numero">27</span>
+                    <span>Activitat 27</span>
+                    <span class="estat">Completada</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- PADDING -->
+        <section class="grup_activitats">
+            <h2>13 · Padding</h2>
+
+            <div class="graella_activitats">
+
+                <a href="13_padding/ex13_1/ex13_1.html" class="targeta_activitat pendent">
+                    <span class="numero">28</span>
+                    <span>Activitat 28</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="13_padding/ex13_1/ex13_1.html" class="targeta_activitat pendent">
+                    <span class="numero">29</span>
+                    <span>Activitat 29</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="13_padding/ex13_2/ex13_2.html" class="targeta_activitat pendent">
+                    <span class="numero">30</span>
+                    <span>Activitat 30</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- BORDER -->
+        <section class="grup_activitats">
+            <h2>14 · Border</h2>
+
+            <div class="graella_activitats">
+
+                <a href="14_border/ex14_1/ex14_1.html" class="targeta_activitat pendent">
+                    <span class="numero">31</span>
+                    <span>Activitat 31</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="14_border/ex14_2/ex14_2.html" class="targeta_activitat pendent">
+                    <span class="numero">32</span>
+                    <span>Activitat 32</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="14_border/ex14_3/ex14_3.html" class="targeta_activitat pendent">
+                    <span class="numero">33</span>
+                    <span>Activitat 33</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="14_border/ex14_4/ex14_4.html" class="targeta_activitat pendent">
+                    <span class="numero">34</span>
+                    <span>Activitat 34</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- LLISTES -->
+        <section class="grup_activitats">
+            <h2>16 · Llistes</h2>
+
+            <div class="graella_activitats">
+
+                <a href="16_listas/ex16_1/ex16_1.html" class="targeta_activitat pendent">
+                    <span class="numero">35</span>
+                    <span>Activitat 35</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="16_listas/ex16_2/ex16_2.html" class="targeta_activitat pendent">
+                    <span class="numero">36</span>
+                    <span>Activitat 36</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="16_listas/ex16_3/ex16_3.html" class="targeta_activitat pendent">
+                    <span class="numero">37</span>
+                    <span>Activitat 37</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="16_listas/ex16_4/ex16_4.html" class="targeta_activitat pendent">
+                    <span class="numero">38</span>
+                    <span>Activitat 38</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- OVERFLOW -->
+        <section class="grup_activitats">
+            <h2>17 · Overflow</h2>
+
+            <div class="graella_activitats">
+
+                <a href="17_overflow/ex17_1/ex17_1.html" class="targeta_activitat pendent">
+                    <span class="numero">39</span>
+                    <span>Activitat 39</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="17_overflow/ex17_2/ex17_2.html" class="targeta_activitat pendent">
+                    <span class="numero">40</span>
+                    <span>Activitat 40</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- FILTERS -->
+        <section class="grup_activitats">
+            <h2>19 · Filters</h2>
+
+            <div class="graella_activitats">
+
+                <a href="19_filters/ex19_1/ex19_1.html" class="targeta_activitat pendent">
+                    <span class="numero">41</span>
+                    <span>Activitat 41</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="19_filters/ex19_2/ex19_2.html" class="targeta_activitat pendent">
+                    <span class="numero">42</span>
+                    <span>Activitat 42</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- TRANSFORM -->
+        <section class="grup_activitats">
+            <h2>20 · Transform</h2>
+
+            <div class="graella_activitats">
+
+                <a href="20_transform/ex20_1/ex20_1.html" class="targeta_activitat pendent">
+                    <span class="numero">43</span>
+                    <span>Activitat 43</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="20_transform/ex20_2/ex20_2.html" class="targeta_activitat pendent">
+                    <span class="numero">44</span>
+                    <span>Activitat 44</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="20_transform/ex20_3/ex20_3.html" class="targeta_activitat pendent">
+                    <span class="numero">45</span>
+                    <span>Activitat 45</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- TRANSITIONS -->
+        <section class="grup_activitats">
+            <h2>21 · Transition</h2>
+
+            <div class="graella_activitats">
+
+                <a href="21_transition/ex21_1/ex21_1.html" class="targeta_activitat pendent">
+                    <span class="numero">46</span>
+                    <span>Activitat 46</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- EINES AVANÇADES -->
+        <section class="grup_activitats">
+            <h2>25 · Eines avançades</h2>
+
+            <div class="graella_activitats">
+
+                <a href="25_herramientas_avanzadas/ex25_1/ex25_1.html" class="targeta_activitat pendent">
+                    <span class="numero">47</span>
+                    <span>Activitat 47</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="25_herramientas_avanzadas/ex25_2/ex25_2.html" class="targeta_activitat pendent">
+                    <span class="numero">48</span>
+                    <span>Activitat 48</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="25_herramientas_avanzadas/ex25_3/ex25_3.html" class="targeta_activitat pendent">
+                    <span class="numero">49</span>
+                    <span>Activitat 49</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="25_herramientas_avanzadas/ex25_4/ex25_4.html" class="targeta_activitat pendent">
+                    <span class="numero">50</span>
+                    <span>Activitat 50</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="25_herramientas_avanzadas/ex25_5/ex25_5.html" class="targeta_activitat pendent">
+                    <span class="numero">51</span>
+                    <span>Activitat 51</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="25_herramientas_avanzadas/ex25_6/ex25_6.html" class="targeta_activitat pendent">
+                    <span class="numero">52</span>
+                    <span>Activitat 52</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- 3D -->
+        <section class="grup_activitats">
+            <h2>26 · 3D</h2>
+
+            <div class="graella_activitats">
+
+                <a href="26_3d/ex26_1/ex26_1.html" class="targeta_activitat pendent">
+                    <span class="numero">53</span>
+                    <span>Activitat 53</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+                <a href="26_3d/ex26_2/ex26_2.html" class="targeta_activitat pendent">
+                    <span class="numero">54</span>
+                    <span>Activitat 54</span>
+                    <span class="estat">Pendent</span>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="peu_activitats">
+
+        <a href="../interfas_activitats.html">
+            ← Tornar a activitats
+        </a>
+
+        <a href="../index.html">
+            Tornar al portfoli
+        </a>
+
+    </footer>
+
 </body>
 </html>
